@@ -6,6 +6,7 @@ package v1
 
 import (
 	"context"
+
 	"github.com/openchami/fabrica/pkg/fabrica"
 )
 
@@ -26,9 +27,9 @@ type TransitionSpec struct {
 
 // TransitionStatus defines the observed state of Transition
 type TransitionStatus struct {
-	Phase      string `json:"phase,omitempty"`
-	Message    string `json:"message,omitempty"`
-	Ready      bool   `json:"ready"`
+	Phase   string `json:"phase,omitempty"`
+	Message string `json:"message,omitempty"`
+	Ready   bool   `json:"ready"`
 	// Add your status fields here
 }
 
@@ -42,6 +43,7 @@ func (r *Transition) Validate(ctx context.Context) error {
 
 	return nil
 }
+
 // GetKind returns the kind of the resource
 func (r *Transition) GetKind() string {
 	return "Transition"
