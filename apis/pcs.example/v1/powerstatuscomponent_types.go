@@ -6,29 +6,35 @@ package v1
 
 import (
 	"context"
+	"time"
+
 	"github.com/openchami/fabrica/pkg/fabrica"
 )
 
 // PowerStatusComponent represents a powerstatuscomponent resource
 type PowerStatusComponent struct {
-	APIVersion string           `json:"apiVersion"`
-	Kind       string           `json:"kind"`
-	Metadata   fabrica.Metadata `json:"metadata"`
+	APIVersion string                     `json:"apiVersion"`
+	Kind       string                     `json:"kind"`
+	Metadata   fabrica.Metadata           `json:"metadata"`
 	Spec       PowerStatusComponentSpec   `json:"spec" validate:"required"`
 	Status     PowerStatusComponentStatus `json:"status,omitempty"`
 }
 
 // PowerStatusComponentSpec defines the desired state of PowerStatusComponent
 type PowerStatusComponentSpec struct {
-	Description string `json:"description,omitempty" validate:"max=200"`
-	// Add your spec fields here
+	XName                     string    `json:"xname" db:"xname"`
+	PowerState                string    `json:"powerState" db:"power_state"`
+	ManagementState           string    `json:"managementState" db:"management_state"`
+	Error                     string    `json:"error" db:"error"`
+	SupportedPowerTransitions []string  `json:"supportedPowerTransitions" db:"supported_power_transitions"`
+	LastUpdated               time.Time `json:"lastUpdated" db:"last_updated"`
 }
 
 // PowerStatusComponentStatus defines the observed state of PowerStatusComponent
 type PowerStatusComponentStatus struct {
-	Phase      string `json:"phase,omitempty"`
-	Message    string `json:"message,omitempty"`
-	Ready      bool   `json:"ready"`
+	Phase   string `json:"phase,omitempty"`
+	Message string `json:"message,omitempty"`
+	Ready   bool   `json:"ready"`
 	// Add your status fields here
 }
 
@@ -42,6 +48,7 @@ func (r *PowerStatusComponent) Validate(ctx context.Context) error {
 
 	return nil
 }
+
 // GetKind returns the kind of the resource
 func (r *PowerStatusComponent) GetKind() string {
 	return "PowerStatusComponent"
