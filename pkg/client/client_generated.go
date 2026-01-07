@@ -61,7 +61,7 @@ import (
 	"net/url"
 	"path"
 
-	"github.com/user/fab-test/apis/pcs.example/v1"
+	"github.com/rainest/fab-test/apis/pcs.example/v1"
 )
 
 // Client provides access to the inventory API

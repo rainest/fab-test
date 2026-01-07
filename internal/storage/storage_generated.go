@@ -23,7 +23,7 @@ import (
 	"github.com/openchami/fabrica/pkg/reconcile"
 	fabricaStorage "github.com/openchami/fabrica/pkg/storage"
 
-	"github.com/user/fab-test/apis/pcs.example/v1"
+	"github.com/rainest/fab-test/apis/pcs.example/v1"
 )
 
 // Backend is the storage backend used by all storage operations.

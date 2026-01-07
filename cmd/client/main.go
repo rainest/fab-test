@@ -76,7 +76,7 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/user/fab-test/pkg/client"
+	"github.com/rainest/fab-test/pkg/client"
 )
 
 var (

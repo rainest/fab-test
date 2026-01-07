@@ -37,7 +37,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/user/fab-test/apis/pcs.example/v1"
+	"github.com/rainest/fab-test/apis/pcs.example/v1"
 )
 
 // PowerStatusComponentResponse represents the response for PowerStatusComponent operations

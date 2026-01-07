@@ -25,7 +25,7 @@ import (
 
 	"github.com/getkin/kin-openapi/openapi3"
 	"github.com/getkin/kin-openapi/openapi3gen"
-	"github.com/user/fab-test/apis/pcs.example/v1"
+	"github.com/rainest/fab-test/apis/pcs.example/v1"
 )
 
 // ServeOpenAPISpec returns the OpenAPI 3.0 specification

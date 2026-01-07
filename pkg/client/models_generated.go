@@ -34,7 +34,7 @@
 package client
 
 import (
-	"github.com/user/fab-test/apis/pcs.example/v1"
+	"github.com/rainest/fab-test/apis/pcs.example/v1"
 )
 
 // CreatePowerStatusComponentRequest represents a request to create a PowerStatusComponent

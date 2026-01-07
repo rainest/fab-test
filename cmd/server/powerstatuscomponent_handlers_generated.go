@@ -47,9 +47,9 @@ import (
 	"github.com/openchami/fabrica/pkg/resource"
 	"github.com/openchami/fabrica/pkg/validation"
 	"github.com/openchami/fabrica/pkg/versioning"
-	v1 "github.com/user/fab-test/apis/pcs.example/v1"
+	v1 "github.com/rainest/fab-test/apis/pcs.example/v1"
 
-	"github.com/user/fab-test/internal/storage"
+	"github.com/rainest/fab-test/internal/storage"
 )
 
 // GetPowerStatusComponents returns all PowerStatusComponent resources
