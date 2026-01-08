@@ -74,9 +74,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/rainest/fab-test/pkg/client"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/rainest/fab-test/pkg/client"
 )
 
 var (
