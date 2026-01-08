@@ -3,6 +3,7 @@ groups:
       storageVersion: v1
       versions:
         - v1
+        - v2alpha1
       resources:
         - Transition
         - PowerStatusComponent
